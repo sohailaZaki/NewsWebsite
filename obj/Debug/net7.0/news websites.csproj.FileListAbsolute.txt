@@ -1,0 +1,86 @@
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\appsettings.Development.json
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\appsettings.json
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\news websites.staticwebassets.runtime.json
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\news websites.exe
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\news websites.deps.json
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\news websites.runtimeconfig.json
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\news websites.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\news websites.pdb
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Azure.Core.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Azure.Identity.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Humanizer.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.CodeDom.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.Memory.Data.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\grade 3\Projects\news websites\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.csproj.AssemblyReference.cache
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.GeneratedMSBuildEditorConfig.editorconfig
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.AssemblyInfoInputs.cache
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.AssemblyInfo.cs
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.csproj.CoreCompileInputs.cache
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.MvcApplicationPartsAssemblyInfo.cs
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.MvcApplicationPartsAssemblyInfo.cache
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.RazorAssemblyInfo.cache
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.RazorAssemblyInfo.cs
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.sourcelink.json
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\staticwebassets.build.json
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\staticwebassets.development.json
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\staticwebassets\msbuild.news websites.Microsoft.AspNetCore.StaticWebAssets.props
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\staticwebassets\msbuild.build.news websites.props
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.news websites.props
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.news websites.props
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\staticwebassets.pack.json
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\scopedcss\bundle\news websites.styles.css
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\scopedcss\projectbundle\news websites.bundle.scp.css
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news web.66AD45B9.Up2Date
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.dll
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\refint\news websites.dll
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.pdb
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\news websites.genruntimeconfig.cache
+D:\grade 3\Projects\news websites\obj\Debug\net7.0\ref\news websites.dll
