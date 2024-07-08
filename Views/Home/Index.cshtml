@@ -1,5 +1,74 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model List<Categories>
+<!-- ======= Hero Section ======= -->
 
- 
+<section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active" style="background-image: url(../assets/img/slide/slide-1.webp)">
+                <div class="container">
+                    <h2>Welcome to <span>News Nexus</span></h2>
+                    <p>Stay informed with the latest headlines from around the globe. Our dedicated team of journalists brings you in-depth analysis and breaking news, ensuring you never miss a story. From politics to technology, business to entertainment, News Nexus covers it all with integrity and accuracy.</p>
+                    <a href="#about" class="btn-get-started scrollto">Read More</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item" style="background-image: url(../assets/img/slide/slide-2.webp)">
+                <div class="container">
+                    <h2>Your Trusted Source for News</h2>
+                    <p>At News Nexus, we prioritize delivering factual and unbiased news. Our commitment to excellence in journalism means you can rely on us for up-to-the-minute updates and thoughtful perspectives. Dive into our comprehensive coverage and stay ahead with the news that matters most to you.</p>
+                    <a href="#about" class="btn-get-started scrollto">Read More</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item" style="background-image: url(../assets/img/slide/slide-3.webp)">
+                <div class="container">
+                    <h2>Explore the World with Us   </h2>
+                    <p>Join the News Nexus community and explore the world through our extensive news network. We bring stories to life with compelling narratives, expert insights, and on-the-ground reporting. Whether you're seeking local updates or international developments, we are your gateway to the latest happenings worldwide.</p>
+                    <a href="#about" class="btn-get-started scrollto">Read More</a>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+    </div>
+</section><!-- End Hero -->
+<section id="featured-services" class="featured-services">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row">
+            
+            @foreach(var item in Model)
+        {
+
+           
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                        <h4 class="title"><a href="">@item.Name</a></h4>
+                        <p class="description">@item.Description</p>
+                    </div>
+                </div>         
+          
+        }
+
+        </div>
+
+    </div>
+</section>
