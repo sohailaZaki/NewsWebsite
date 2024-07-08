@@ -1069,13 +1069,13 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Departments
+# News
 --------------------------------------------------------------*/
-.departments .nav-tabs {
+.News .nav-tabs {
   border: 0;
 }
 
-.departments .nav-link {
+.News .nav-link {
   border: 0;
   padding: 20px;
   color: #555555;
@@ -1084,60 +1084,61 @@ section {
   cursor: pointer;
 }
 
-.departments .nav-link h4 {
+.News .nav-link h4 {
   font-size: 18px;
   font-weight: 600;
   transition: 0.3s;
 }
 
-.departments .nav-link p {
+.News .nav-link p {
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.departments .nav-link:hover h4 {
+.News .nav-link:hover h4 {
   color: rgb(4, 59, 92);
 }
 
-.departments .nav-link.active {
+.News .nav-link.active {
   background: #f7fcfc;
   border-color: rgb(4, 59, 92);
 }
 
-.departments .nav-link.active h4 {
+.News .nav-link.active h4 {
   color: rgb(4, 59, 92);
 }
 
-.departments .tab-pane.active {
+.News .tab-pane.active {
   animation: slide-down 0.5s ease-out;
 }
 
-.departments .tab-pane img {
+.News .tab-pane  img {
   float: left;
-  max-width: 300px;
+  max-width: 400px;
   padding: 0 15px 15px 0;
 }
 
 @media (max-width: 768px) {
-  .departments .tab-pane img {
+  .News .tab-pane img {
     float: none;
     padding: 0 0 15px 0;
     max-width: 100%;
   }
 }
 
-.departments .tab-pane h3 {
+.News .tab-pane h3 {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
   color: rgb(4, 59, 92);
 }
 
-.departments .tab-pane p {
+.News .tab-pane p {
   color: #777777;
+  text-align : center;
 }
 
-.departments .tab-pane p:last-child {
+.News .tab-pane p:last-child {
   margin-bottom: 0;
 }
 
@@ -1188,7 +1189,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #b2e4e6;
+  color: rgb(4, 59, 92);
   font-size: 26px;
 }
 
@@ -1209,11 +1210,13 @@ section {
   font-style: italic;
   margin: 0 15px 0 15px;
   padding: 20px 20px 60px 20px;
-  background: #f0fafa;
+  background: #4e6eba2e;
   position: relative;
   border-radius: 6px;
   position: relative;
   z-index: 1;
+  height: 200px;
+  width: 800px;
 }
 
 .testimonials .swiper-pagination {

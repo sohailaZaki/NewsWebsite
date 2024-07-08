@@ -29,7 +29,26 @@ namespace news_websites.Controllers
            
             return View();
         }
+		[HttpPost]
+        public IActionResult saveContact(ContactUS model)
 
+        {
+			db.Add(model);
+			db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public IActionResult Messages()
+
+        {
+			
+            return View(db.ContactUs.ToList());
+        }
+        public IActionResult NewsOfCategory(int id)
+
+        {
+			var result = db.News.Where( e => e.CategoryId == id ).ToList();
+            return View(result);
+        }
         public IActionResult Privacy()
 		{
 			return View();

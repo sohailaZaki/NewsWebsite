@@ -9,6 +9,74 @@
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar0.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar0.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar1.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar10.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar10.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar11.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar11.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar12.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar12.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar13.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar13.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar14.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar14.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar15.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar15.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar16.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar16.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar2.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar3.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar4.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar5.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar6.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar7.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar7.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar8.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar8.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\Messages\\avatar9.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Messages\\avatar9.png"
+    },
+    {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\about.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\about.jpg"
     },
@@ -93,6 +161,26 @@
       "PackagePath": "staticwebassets\\assets\\img\\gallery\\gallery-8.jpg"
     },
     {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\health1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\health1.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\health2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\health2.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\health3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\health3.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\health4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\health4.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\health5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\health5.png"
+    },
+    {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\icon.PNG",
       "PackagePath": "staticwebassets\\assets\\img\\icon.PNG"
     },
@@ -131,26 +219,6 @@
     {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\slide\\slide-3.webp",
       "PackagePath": "staticwebassets\\assets\\img\\slide\\slide-3.webp"
-    },
-    {
-      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\testimonials\\testimonials-1.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-1.jpg"
-    },
-    {
-      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\testimonials\\testimonials-2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-2.jpg"
-    },
-    {
-      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\testimonials\\testimonials-3.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-3.jpg"
-    },
-    {
-      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\testimonials\\testimonials-4.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-4.jpg"
-    },
-    {
-      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\testimonials\\testimonials-5.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\testimonials\\testimonials-5.jpg"
     },
     {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\js\\main.js",
