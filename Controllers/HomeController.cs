@@ -6,19 +6,31 @@ namespace news_websites.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly ILogger<HomeController> _logger;
+		NewsContext db { get; set; }
+	
 
-		public HomeController(ILogger<HomeController> logger)
+        private readonly ILogger<HomeController> _logger;
+
+		public HomeController(ILogger<HomeController> logger, NewsContext context)
 		{
 			_logger = logger;
-		}
+            db = context;
+        }
 
 		public IActionResult Index()
-		{
-			return View();
-		}
 
-		public IActionResult Privacy()
+		{
+		var result =  	db.Categories.ToList();
+			return View(result);
+		}
+        public IActionResult ContactUs()
+
+        {
+           
+            return View();
+        }
+
+        public IActionResult Privacy()
 		{
 			return View();
 		}
