@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+ @model List<News> 
+@{
+
+
+<section class="spacer"></section>
+<section id="News" class="News">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>News</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <ul class="nav nav-tabs flex-column" role="tablist">
+                    @foreach (var item in Model)
+                    {
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link show" data-bs-toggle="tab" data-bs-target="#tab-@item.Id" aria-selected="false" role="tab" tabindex="-1">
+                                <h4>@item.Title</h4>
+                                <p>@item.Date</p>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="col-lg-8">
+                <div class="tab-content">
+                    @foreach (var item in Model)
+                    {
+                            <div class="tab-pane" id="tab-@item.Id" role="tabpanel">
+                                <center>
+                                    <h3>@item.Title</h3>
+                                    <p class="fst-italic">@item.Topic</p>
+                                    <img src="@Url.Content(@item.imageUrl)" alt="" class="img-fluid">
+                                    <p>@item.Description</p>
+                                </center>
+                                <a href="#about" class="btn-get-started scrollto">Read More</a>
+                            </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+}
+<style>
+    .spacer {
+        height: 100px; /* Adjust this value to increase or decrease the space */
+    }
+
+</style>

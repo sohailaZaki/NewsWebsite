@@ -10,6 +10,8 @@ namespace news_websites.Models
 		public DateTime Date { get; set; }
 		public string imageUrl { get; set; }
 		public Categories Category { get; set; }
+		public string Description { get; set; }
+
 		[ForeignKey("Categories")]
 		public int CategoryId { get; set; }
 	}

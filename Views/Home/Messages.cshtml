@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<ContactUS>
+@{
+        <section class="spacer"></section>
+    <section id="testimonials" class="testimonials">
+        <div class="container aos-init aos-animate" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Opinions Of Users</h2>
+               
+            </div>
+
+                   <center>
+                        @foreach(var item in Model)
+                        {
+                            var randomImageIndex = new Random().Next(0, 17);// Generates random number between 1 and 14
+                             var soruce = "~/assets/img/Messages/avatar" + randomImageIndex + ".png";
+
+                            <div class="testimonial-item">
+                        <p>
+
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    @item.Subject
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    <br></br>
+                            @item.Message
+
+                                </p>
+                        <img src="@Url.Content(soruce)" class="testimonial-img" alt="">
+                                <h3>  @item.Name</h3>
+                                <h4>  @item.Email</h4>
+                            </div>
+
+                        }
+            </center>
+                
+
+        
+            
+
+        </div>
+    </section>
+
+}
+<style>
+    .spacer {
+        height: 100px; /* Adjust this value to increase or decrease the space */
+    }
+
+</style>
