@@ -37,6 +37,14 @@ namespace news_websites.Controllers
 			db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult DeleteNews(int  id)
+
+        {
+            var result = db.News.Find(id);
+            db.Remove(result);
+            db.SaveChanges();
+            return RedirectToAction("NewsofCategory");
+        }
         public IActionResult Messages()
 
         {
@@ -46,6 +54,9 @@ namespace news_websites.Controllers
         public IActionResult NewsOfCategory(int id)
 
         {
+            Categories categories = db.Categories.Find(id);
+            ViewBag.CategoryName = categories.Name;
+            ViewBag.CategoryDesc = categories.Description;
 			var result = db.News.Where( e => e.CategoryId == id ).ToList();
             return View(result);
         }

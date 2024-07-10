@@ -1,0 +1,49 @@
+﻿@model news_websites.Models.Categories
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div style="text-align : center">
+    <h1 class="mt-4" style="color : rgb(4, 59, 92) ">Edit @ViewBag.Cat</h1>
+</div>
+
+<hr />
+
+<div class="row mb-5" style="padding-left : 600px">
+    <div class="col-md-4" >
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="CategoryId"  class="control-label mb-2"></label>
+                <input asp-for="CategoryId" class="form-control" />
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="Name" class="control-label  mb-2"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="Description" class="control-label  mb-2"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Save" class="btn btn-outline-success" />
+                    
+                <a style="padding-left : 40px"  asp-action="Index">Back to List</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
