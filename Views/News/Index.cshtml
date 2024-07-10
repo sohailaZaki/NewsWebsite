@@ -1,0 +1,85 @@
+﻿@model IEnumerable<news_websites.Models.News>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .index-title {
+        color: rgb(4, 59, 92);
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .action-icons {
+        color: rgba(4, 59, 92, 1);
+    }
+
+        .action-icons:hover {
+            color: #2c3e50;
+        }
+
+    .info-icon {
+        color: green;
+    }
+
+        .info-icon:hover {
+            color: #27ae60;
+        }
+
+    .delete-icon {
+        color: red;
+    }
+
+        .delete-icon:hover {
+            color: #e74c3c;
+        }
+</style>
+
+
+
+<a class="appointment-btn scrollto mt-5 mb-5" style="" asp-action="Create">Create New<i class="bi bi-plus"></i></a>
+
+<table class="table table-hover custom-table">
+    <thead>
+        <tr>
+            <th style="width: 30%">
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th style="width: 15%">
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th style="width: 10%">
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th style="width: 30%">
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square action-icons"></i></a> |
+                    <a asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-info-circle info-icon"></i></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash3 delete-icon"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

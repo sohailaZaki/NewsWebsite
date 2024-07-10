@@ -1,4 +1,6 @@
-﻿namespace news_websites.Models
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace news_websites.Models
 {
 	public class Categories
 	{
@@ -8,8 +10,8 @@
 		public string Name { get; set; }
 		public string Description { get; set; }
 
-	
-		public List<News>News { get; set; }
+		[AllowNull]
+		public List<News>?News { get; set; }
 
 	}
 }

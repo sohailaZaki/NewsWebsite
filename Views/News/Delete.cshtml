@@ -1,0 +1,86 @@
+﻿@model news_websites.Models.News
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<style>
+    .center-text {
+        text-align: center;
+    }
+
+    .delete-title {
+        color: rgb(4, 59, 92);
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .delete-message {
+        color: red;
+        padding-left: 100px;
+    }
+
+    .delete-form {
+        padding-left: 700px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .rowdesign{
+        padding-left: 100px;
+    }
+</style>
+
+<div class="center-text">
+    <h1 class="mt-4 mb-4 delete-title">Delete @ViewBag.News</h1>
+</div>
+
+<h3 class="delete-message">Are you sure you want to delete @ViewBag.News?</h3>
+
+<div>
+
+    <hr />
+    <dl class="row rowdesign">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Topic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Topic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.imageUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.imageUrl)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Category.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" class="delete-form">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-outline-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
