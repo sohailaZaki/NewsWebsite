@@ -58,6 +58,7 @@ namespace news_websites.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("Id,CategoryId,Name,Description")] Categories categories)
         {
+            categories.News = new List<News>();
             if (ModelState.IsValid)
             {
                 db.Add(categories);

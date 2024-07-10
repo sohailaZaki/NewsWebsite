@@ -1,0 +1,61 @@
+﻿@model news_websites.Models.News
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<div style="text-align : center">
+
+    <h1 class="mt-4" style="color : rgb(4, 59, 92) ">Edit @ViewBag.News</h1>
+</div>
+
+
+<hr />
+<div class="row mb-5" style="padding-left : 600px">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="Title" class="control-label  mb-2"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="Topic" class="control-label  mb-2"></label>
+                <input asp-for="Topic" class="form-control" />
+                <span asp-validation-for="Topic" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="Date" class="control-label  mb-2"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="imageUrl" class="control-label  mb-2"></label>
+                <input asp-for="imageUrl" class="form-control" />
+                <span asp-validation-for="imageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="Description" class="control-label  mb-2"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="padding-bottom : 10px">
+                <label asp-for="Category" class="control-label  mb-2"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3" style="padding-bottom : 10px">
+                <input type="submit" value="Save" class="btn btn-outline-success" />
+                <a style="padding-left : 40px" asp-action="Index">Back to List</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

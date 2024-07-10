@@ -1,0 +1,79 @@
+﻿@model news_websites.Models.News
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    .center-text {
+        text-align: center;
+    }
+
+    .details-title {
+        color: rgb(4, 59, 92);
+        margin-top: 40px;
+    }
+
+    .details-list {
+        padding-left: 100px;
+    }
+
+    .details-actions {
+        padding-left: 700px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+</style>
+
+<div class="center-text">
+    <h1 class="mt-4 details-title">Details of @ViewBag.News</h1>
+</div>
+
+<hr />
+
+<div>
+
+    <dl class="row details-list">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Topic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Topic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.imageUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.imageUrl)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Category.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
+
+<div class="details-actions">
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
