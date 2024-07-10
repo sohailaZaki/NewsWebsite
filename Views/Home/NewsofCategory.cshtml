@@ -6,12 +6,12 @@
 
 
 <section class="spacer"></section>
-<section id="News" class="News">
+<section id=" News" class="News">
     <div class="container aos-init aos-animate" data-aos="fade-up">
 
         <div class="section-title">
-            <h2>News</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                <h2>@ViewBag.CategoryName News</h2>
+                <p>@ViewBag.CategoryDesc</p>
         </div>
 
         <div class="row aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
@@ -34,15 +34,24 @@
                     {
                             <div class="tab-pane" id="tab-@item.Id" role="tabpanel">
                                 <center>
-                                    <h3>@item.Title</h3>
+                                <div class="m-5">  
+                                <h3>@item.Title</h3>
+                                    </div>
                                     <p class="fst-italic">@item.Topic</p>
                                     <img src="@Url.Content(@item.imageUrl)" alt="" class="img-fluid">
                                     <p>@item.Description</p>
                                 </center>
-                                <a href="#about" class="btn-get-started scrollto">Read More</a>
-                            </div>
+                                <div style="text-align :right"class="mt-2">
+                                
+                                <a href="#about" class="btn-get-started scrollto ">Read More</a>
+                                </div>
+                                <center>
+                                    <a type="button" class="btn btn-outline-danger" href="/Home/DeleteNews/@item.Id">Delete</a>
+                                </center>
+                                </div>
 
                     }
+                   
                 </div>
             </div>
         </div>

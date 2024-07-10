@@ -1,0 +1,42 @@
+﻿@model news_websites.Models.Categories
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<div style="text-align : center">
+
+<h1 class="mt-4 mb-4" style="color : rgb(4, 59, 92)">Delete @ViewBag.Cat</h1>
+</div>
+
+<h3 style="color : red;padding-left : 100px">Are you sure you want to delete @ViewBag.Cat Category? </h3>
+<div>
+   
+    <hr />
+    <dl class="row mb-5" style="padding-left : 100px">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+    
+    <form asp-action="Delete" style="padding-left : 700px" class="mt-3 mb-5">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-outline-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

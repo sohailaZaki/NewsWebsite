@@ -97,6 +97,7 @@
  
 
   <main id="main">
+        <section class="spacer" style="height: 150px;"></section>
 
         @RenderBody()
 
@@ -153,7 +154,7 @@
 
   <!-- Template Main JS File -->
     <script src="~/assets/js/main.js"></script>
-
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>
