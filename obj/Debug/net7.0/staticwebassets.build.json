@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hvzTZMQtK/z2joXn3kswiXZEvJfezCt8zYkxxsxuv8o=",
+  "Hash": "KqFrPV0fqMFQCyyvHPiSlBVPD5Uh5Ed8iN7J9sfESBU=",
   "Source": "news websites",
   "BasePath": "_content/news websites",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\about.jpg"
+    },
+    {
+      "Identity": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\About.png",
+      "SourceId": "news websites",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\grade 3\\Projects\\news websites\\wwwroot\\",
+      "BasePath": "_content/news websites",
+      "RelativePath": "assets/img/About.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\About.png"
     },
     {
       "Identity": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\apple-touch-icon.png",

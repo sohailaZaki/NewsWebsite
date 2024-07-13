@@ -1,7 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model List<Categories>
 <!-- ======= Hero Section ======= -->
 
 <section id="hero">
@@ -16,7 +15,7 @@
                 <div class="container">
                     <h2>Welcome to <span>News Nexus</span></h2>
                     <p>Stay informed with the latest headlines from around the globe. Our dedicated team of journalists brings you in-depth analysis and breaking news, ensuring you never miss a story. From politics to technology, business to entertainment, News Nexus covers it all with integrity and accuracy.</p>
-                    <a href="#about" class="btn-get-started scrollto">Read More</a>
+                    <a href="/Home/Categories" class="btn-get-started scrollto">Read More</a>
                 </div>
             </div>
 
@@ -50,33 +49,4 @@
 
     </div>
 </section><!-- End Hero -->
-<section id="featured-services" class="featured-services">
-    <div class="container aos-init aos-animate" data-aos="fade-up">
-        <div class="row">
-            
-            @foreach(var item in Model)
-        {
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                        <a href="/Home/NewsofCategory/@item.Id">
-                            <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                        </a>
-                            <a href="/Home/NewsofCategory/@item.Id"> 
-                                
-                                <h4 class="title">@item.Name  </h4>
-                                
-                            </a>
-                            
-                      
-                            <a href="/Home/NewsofCategory/@item.Id">   
-                                <p class="description">@item.Description</p>
-                                </a>
-                    </div>
-                </div>
-        }
-
-        </div>
-
-    </div>
-</section>

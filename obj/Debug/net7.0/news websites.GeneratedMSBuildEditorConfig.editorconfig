@@ -46,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/grade 3/Projects/news websites/Views/Home/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/grade 3/Projects/news websites/Views/Home/ContactUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/grade 3/Projects/news websites/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/grade 3/Projects/news websites/Views/Home/ReadMore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWFkTW9yZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/grade 3/Projects/news websites/Views/News/Create.cshtml]
