@@ -6,16 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using news_websites.Models;
+using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
-namespace news_websites.Views.Categories
+namespace news_websites.Controllers
 {
     public class NewsController : Controller
     {
         private readonly NewsContext db;
+        private readonly IHostingEnvironment _host;
 
-        public NewsController(NewsContext context)
+        public NewsController(NewsContext context, IHostingEnvironment host)
         {
             db = context;
+            _host = host;
         }
 
         // GET: News
@@ -57,24 +60,38 @@ namespace news_websites.Views.Categories
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Topic,Date,imageUrl,Description,CategoryId")] News news)
+        public async Task<IActionResult> Create([Bind("Id,Title,Topic,Date,clientFile,Description,CategoryId,clientFile")] News news)
         {
-           var Cat = db.Categories.Find(news.CategoryId);
+            var Cat = db.Categories.Find(news.CategoryId);
             if (Cat != null)
             {
                 news.Category = Cat;
             }
-                if (ModelState.IsValid) {
-                    db.Add(news);
-                    await db.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-                }
-                
-            ViewData["CategoryId"] = new SelectList(db.Categories, "Id", "Name", news.CategoryId);
-            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            string fileName = string.Empty;
+
+            if (ModelState.IsValid)
             {
-                Console.WriteLine(error.ErrorMessage);
+                if (news.clientFile != null)
+                {
+                    string myUpload = Path.Combine(_host.WebRootPath, "assets\\img");
+                    fileName = Path.GetFileName(news.clientFile.FileName);
+                    string fullpath = Path.Combine(myUpload, fileName);
+                    using (var stream = new FileStream(fullpath, FileMode.Create))
+                    {
+                        await news.clientFile.CopyToAsync(stream);
+                    }
+                    news.image = fileName;
+                }
+                else
+                {
+                    news.image = "noImg.png";
+                }
+                db.Add(news);
+                await db.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
+
+            ViewData["CategoryId"] = new SelectList(db.Categories, "Id", "Name", news.CategoryId);
             return View(news);
         }
 
@@ -102,17 +119,44 @@ namespace news_websites.Views.Categories
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Topic,Date,imageUrl,Description,CategoryId")] News news)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Topic,Date,clientFile,Description,CategoryId")] News news)
         {
             if (id != news.Id)
             {
                 return NotFound();
             }
 
-         if(ModelState.IsValid) { 
+            if (ModelState.IsValid)
+            {
                 try
                 {
-                    db.Update(news);
+                    var existingNews = await db.News.FindAsync(id);
+                    if (existingNews == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Update the fields
+                    existingNews.Title = news.Title;
+                    existingNews.Topic = news.Topic;
+                    existingNews.Date = news.Date;
+                    existingNews.Description = news.Description;
+                    existingNews.CategoryId = news.CategoryId;
+
+                    // If a new file is chosen, update the image
+                    if (news.clientFile != null)
+                    {
+                        string myUpload = Path.Combine(_host.WebRootPath, "assets\\img");
+                        string fileName = Path.GetFileName(news.clientFile.FileName);
+                        string fullpath = Path.Combine(myUpload, fileName);
+                        using (var stream = new FileStream(fullpath, FileMode.Create))
+                        {
+                            await news.clientFile.CopyToAsync(stream);
+                        }
+                        existingNews.image = fileName;
+                    }
+
+                    db.Update(existingNews);
                     await db.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -131,7 +175,31 @@ namespace news_websites.Views.Categories
             ViewData["CategoryId"] = new SelectList(db.Categories, "Id", "Name", news.CategoryId);
             return View(news);
         }
+        public IActionResult DeleteImg(string name,int id)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return NotFound();
+            }
 
+            // Path to the image
+            string imagePath = Path.Combine(_host.WebRootPath, "assets\\img", name);
+
+            // Check if the image exists and delete it
+            if (System.IO.File.Exists(imagePath))
+            {
+                var newsItem =  db.News.Find(id);
+                if (newsItem != null)
+                {
+                    newsItem.image = "noImg.png";
+                    db.Update(newsItem);
+                     db.SaveChanges();
+                }
+
+            }
+                return RedirectToAction("Edit", new { id });
+
+        }
         // GET: News/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -169,14 +237,14 @@ namespace news_websites.Views.Categories
             {
                 db.News.Remove(news);
             }
-            
+
             await db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool NewsExists(int id)
         {
-          return (db.News?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (db.News?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

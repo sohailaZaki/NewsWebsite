@@ -12,7 +12,7 @@
 <hr />
 <div class="row mb-5" style="padding-left : 600px">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group" style="padding-bottom : 10px">
@@ -31,9 +31,13 @@
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
             <div class="form-group" style="padding-bottom : 10px">
-                <label asp-for="imageUrl" class="control-label  mb-2"></label>
-                <input asp-for="imageUrl" class="form-control" />
-                <span asp-validation-for="imageUrl" class="text-danger"></span>
+            
+                <input type="file" asp-for="clientFile" class="form-control" onchange="loadfile(event)" />
+                <div class="mt-3 position-relative">
+                <img src="@Url.Content("~/assets/img/" + Model.image)" id="myImg" height="200px" / class="mt-3">
+                    <a href="@Url.Action("DeleteImg", new { name = Model.image, id = Model.Id })"><i id="wrong" class="bi bi-x-square"></i></a>
+                </div>
+                <input type="hidden" id="removeImageFlag" name="RemoveImage" value="false" />
             </div>
             <div class="form-group" style="padding-bottom : 10px">
                 <label asp-for="Description" class="control-label  mb-2"></label>
@@ -58,4 +62,29 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        var loadfile = function (event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var myImg = document.getElementById('myImg');
+                myImg.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0])
+
+        }
+        function removeImage() {
+            var myImg = document.getElementById('myImg');
+            myImg.src = '@Url.Content("~/assets/img/noImg.png")';
+            document.getElementById('removeImageFlag').value = "true";
+        }
+    </script>
+
 }
+<style>
+#wrong{
+    position : relative;
+    bottom:100px;
+    right : 10px
+}
+
+</style>

@@ -14,8 +14,12 @@ namespace news_websites.Models
 		public string Topic { get; set; }
 		public DateTime Date { get; set; }
 		[AllowNull]
-		public string imageUrl { get; set; }
-		public Categories ?Category { get; set; }
+		public string ?image { get; set; }
+	
+        [NotMapped]
+        public IFormFile? clientFile { get; set; }
+
+        public Categories ?Category { get; set; }
 		public string Description { get; set; }
 
 		[ForeignKey("Categories")]
