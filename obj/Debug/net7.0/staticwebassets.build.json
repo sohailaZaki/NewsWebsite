@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XPfv5h3pnZeDbsrf6wh/k8vlNQEHw3lOlzmcVojygqU=",
+  "Hash": "hvzTZMQtK/z2joXn3kswiXZEvJfezCt8zYkxxsxuv8o=",
   "Source": "news websites",
   "BasePath": "_content/news websites",
   "Mode": "Default",
@@ -2656,6 +2656,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\Messages\\avatar9.png"
+    },
+    {
+      "Identity": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\noImg.png",
+      "SourceId": "news websites",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\grade 3\\Projects\\news websites\\wwwroot\\",
+      "BasePath": "_content/news websites",
+      "RelativePath": "assets/img/noImg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\noImg.png"
     },
     {
       "Identity": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\poly1.png",

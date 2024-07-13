@@ -38,7 +38,7 @@
 
 
 
-<a class="appointment-btn scrollto mt-5 mb-5" style="" asp-action="Create">Create New<i class="bi bi-plus"></i></a>
+<a class="btn btn-outline-success mt-5 mb-5" style="margin-left: 50px" asp-action="Create">Create New<i class="bi bi-plus"></i></a>
 
 <table class="table table-hover custom-table">
     <thead>
@@ -51,6 +51,9 @@
             </th>
             <th style="width: 10%">
                 @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th >
+                @Html.DisplayNameFor(model => model.image)
             </th>
             <th style="width: 30%">
                 @Html.DisplayNameFor(model => model.Description)
@@ -70,6 +73,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Category.Id)
+                </td>
+                <td>
+                    <img src="~/assets/img/@item.image" alt="Alternate Text"style="width : 48px"class="img-thumbnail" />
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
