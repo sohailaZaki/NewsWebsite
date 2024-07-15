@@ -89,6 +89,14 @@
       "PackagePath": "staticwebassets\\assets\\img\\apple-touch-icon.png"
     },
     {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\background.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\background.webp"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\backgroung.png",
+      "PackagePath": "staticwebassets\\assets\\img\\backgroung.png"
+    },
+    {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\business1.png",
       "PackagePath": "staticwebassets\\assets\\img\\business1.png"
     },
@@ -339,6 +347,14 @@
     {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\poly5.png",
       "PackagePath": "staticwebassets\\assets\\img\\poly5.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\register.png",
+      "PackagePath": "staticwebassets\\assets\\img\\register.png"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\register.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\register.webp"
     },
     {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\img\\science1.png",
@@ -891,6 +907,10 @@
     {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\vendor\\swiper\\swiper-bundle.min.js.map",
       "PackagePath": "staticwebassets\\assets\\vendor\\swiper\\swiper-bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\assets\\video\\login.mp4",
+      "PackagePath": "staticwebassets\\assets\\video\\login.mp4"
     },
     {
       "Id": "D:\\grade 3\\Projects\\news websites\\wwwroot\\css\\site.css",
