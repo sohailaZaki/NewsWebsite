@@ -1,7 +1,9 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@{
+    var isUserAuthenticated = SignInManager.IsSignedIn(User);
     ViewData["Title"] = "Home Page";
 }
-@model List<Categories>
 <!-- ======= Hero Section ======= -->
 
 <section id="hero">
@@ -15,8 +17,39 @@
             <div class="carousel-item active" style="background-image: url(../assets/img/slide/slide-1.webp)">
                 <div class="container">
                     <h2>Welcome to <span>News Nexus</span></h2>
-                    <p>Stay informed with the latest headlines from around the globe. Our dedicated team of journalists brings you in-depth analysis and breaking news, ensuring you never miss a story. From politics to technology, business to entertainment, News Nexus covers it all with integrity and accuracy.</p>
-                    <a href="#about" class="btn-get-started scrollto">Read More</a>
+                    <p>Stay informed with the latest headlines from around the globe...</p>
+
+                    <div class="container2">
+                        @if (!isUserAuthenticated)
+                        {
+                            <div class="popup" id="popup">
+                                <div class="icon">
+                                    <span class="material-symbols-outlined">
+                                        <i class="bi bi-lightbulb" style="color: yellow"></i>
+                                    </span>
+                                </div>
+                                <div class="title">
+                                    <p class="p1" style="color: rgb(4,59,92)">Sorry, access to this Page Is Restricted</p>
+                                </div>
+                                <div class="description">
+                                    <p class="p2" style="color: rgb(4,59,92)">You Should Login To The Website To Unlock 🔑 This Page 🔒</p>
+                                </div>
+                                <a id="open-popup-btn" class="appointment-btn scrollto" href="/identity/Account/login">
+                                    Log In
+                                </a>
+                                <a id="dismiss-popup-btn" onclick="closePopup()" class="appointment-btn scrollto" href="#">Dismiss</a>
+                            </div>
+                        }
+                    </div>
+
+                    @if (isUserAuthenticated)
+                    {
+                        <a href="/Home/Categories" class="btn-get-started scrollto">Read More</a>
+                    }
+                    else
+                    {
+                        <a onclick="openPopup()" href="#" class="btn-get-started scrollto">Read More</a>
+                    }
                 </div>
             </div>
 
@@ -24,17 +57,17 @@
             <div class="carousel-item" style="background-image: url(../assets/img/slide/slide-2.webp)">
                 <div class="container">
                     <h2>Your Trusted Source for News</h2>
-                    <p>At News Nexus, we prioritize delivering factual and unbiased news. Our commitment to excellence in journalism means you can rely on us for up-to-the-minute updates and thoughtful perspectives. Dive into our comprehensive coverage and stay ahead with the news that matters most to you.</p>
-                    <a href="#about" class="btn-get-started scrollto">Read More</a>
+                    <p>At News Nexus, we prioritize delivering factual and unbiased news...</p>
+                    <a href="/Home/Categories" class="btn-get-started scrollto">Read More</a>
                 </div>
             </div>
 
             <!-- Slide 3 -->
             <div class="carousel-item" style="background-image: url(../assets/img/slide/slide-3.webp)">
                 <div class="container">
-                    <h2>Explore the World with Us   </h2>
-                    <p>Join the News Nexus community and explore the world through our extensive news network. We bring stories to life with compelling narratives, expert insights, and on-the-ground reporting. Whether you're seeking local updates or international developments, we are your gateway to the latest happenings worldwide.</p>
-                    <a href="#about" class="btn-get-started scrollto">Read More</a>
+                    <h2>Explore the World with Us</h2>
+                    <p>Join the News Nexus community and explore the world...</p>
+                    <a href="/Home/Categories" class="btn-get-started scrollto">Read More</a>
                 </div>
             </div>
 
@@ -50,33 +83,90 @@
 
     </div>
 </section><!-- End Hero -->
-<section id="featured-services" class="featured-services">
-    <div class="container aos-init aos-animate" data-aos="fade-up">
-        <div class="row">
-            
-            @foreach(var item in Model)
-        {
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                        <a href="/Home/NewsofCategory/@item.Id">
-                            <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                        </a>
-                            <a href="/Home/NewsofCategory/@item.Id"> 
-                                
-                                <h4 class="title">@item.Name  </h4>
-                                
-                            </a>
-                            
-                      
-                            <a href="/Home/NewsofCategory/@item.Id">   
-                                <p class="description">@item.Description</p>
-                                </a>
-                    </div>
-                </div>
+<script>
+    document.getElementById("open-popup-btn").addEventListener("click", function () {
+        document.getElementsByClassName("popup")[0].classList.add("active");
+    });
+
+    let popup = document.getElementById("popup");
+    function openPopup() {
+        popup.classList.add("open-popup");
+    }
+    function closePopup() {
+        popup.classList.remove("open-popup");
+    }
+</script>
+
+<style>
+    .container2 {
+        margin: auto;
+    }
+
+    .p1 {
+        color: rgb(4,59,92);
+    }
+
+    .popup {
+        width: 350px;
+        height: 400px;
+        padding: 40px 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-sizing: border-box;
+        z-index: 2;
+        text-align: center;
+        visibility: hidden;
+        top: 0%;
+        left: 25%;
+        transform: translate(-50%,-50%) scale(0.1);
+        transition: transform 0.4s;
+        margin: 350px 400px auto;
+        position: absolute;
+    }
+
+    .open-popup {
+        visibility: visible;
+        transform: translate(-50%,-50%) scale(1);
+        transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+    }
+
+    .popup .icon {
+        margin: 5px 0;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 50%;
+        line-height: 60px;
+    }
+
+        .popup .icon .material-symbols-outlined {
+            font-size: 30px;
+            color: bisque;
         }
 
-        </div>
+    .popup .title {
+        margin: 5px 0;
+        font-size: 25px;
+        font-weight: 600;
+    }
 
-    </div>
-</section>
+    .popup .description {
+        color: #222;
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .popup.active .icon {
+        transition: all 300ms ease-in-out 250ms;
+    }
+
+    .popup.active .title {
+        transition: all 300ms ease-in-out 300ms;
+    }
+
+    .popup.active .description {
+        transition: all 300ms ease-in-out 350ms;
+    }
+</style>

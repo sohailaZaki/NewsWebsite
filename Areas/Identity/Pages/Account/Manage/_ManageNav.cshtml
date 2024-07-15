@@ -1,0 +1,53 @@
+﻿@inject SignInManager<IdentityUser> SignInManager
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+<ul class="nav nav-pills flex-column custom-nav">
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Profile</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Email</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Password</a>
+    </li>
+    @if (hasExternalLogins)
+    {
+        <li id="external-logins" class="nav-item">
+            <a id="external-login" class="nav-link @ManageNavPages.ExternalLoginsNavClass(ViewContext)" asp-page="./ExternalLogins">External logins</a>
+        </li>
+    }
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">Two-factor authentication</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data</a>
+    </li>
+</ul>
+
+<style>
+    .custom-nav {
+        background-color: rgba(255, 255, 255, 0.8); /* Light background for visibility */
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.1);
+    }
+
+    .nav-link {
+        color: rgb(4, 59, 92);
+        border-radius: 0.5rem;
+        margin: 0.5rem 0;
+        transition: background-color 0.3s;
+    }
+
+        .nav-link:hover {
+            background-color: rgba(4, 59, 92, 0.1);
+            color: #ff6219; /* Highlight color */
+        }
+
+        .nav-link.active {
+            background-color: rgb(4, 59, 92);
+            color: white; /* Active link color */
+        }
+</style>

@@ -29,7 +29,24 @@ namespace news_websites.Controllers
            
             return View();
         }
-		[HttpPost]
+        public IActionResult About()
+
+        {
+
+            return View();
+        }
+        public IActionResult Categories()
+
+        {
+            var categories = db.Categories.ToList();
+            if (categories == null)
+            {
+                return NotFound(); // or handle as needed
+            }
+
+            return View(categories);
+        }
+        [HttpPost]
         public IActionResult saveContact(ContactUS model)
 
         {
@@ -60,6 +77,15 @@ namespace news_websites.Controllers
 			var result = db.News.Where( e => e.CategoryId == id ).ToList();
             return View(result);
         }
+        public IActionResult ReadMore(int id)
+
+        {
+            News news = db.News.Find(id);
+            ViewBag.News = news;
+ 
+            return View("ReadMore");
+        }
+   
         public IActionResult Privacy()
 		{
 			return View();
