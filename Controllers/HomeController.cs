@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using news_websites.Models;
 using System.Diagnostics;
 
 namespace news_websites.Controllers
 {
-	public class HomeController : Controller
+    [Authorize]
+
+    public class HomeController : Controller
 	{
-		NewsContext db { get; set; }
+       
+
+        NewsContext db { get; set; }
 	
 
         private readonly ILogger<HomeController> _logger;

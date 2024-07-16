@@ -4,13 +4,16 @@
 }
 <ul class="nav nav-pills flex-column custom-nav">
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Profile</a>
+        <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Profile<i class="bi bi-person-square icon"></i></a>
+        
+
+
+        </li>
+    <li class="nav-item">
+        <a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Email<i class="bi bi-envelope icon"></i></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Email</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Password</a>
+        <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Password<i class="bi bi-fingerprint icon"></i></a>
     </li>
     @if (hasExternalLogins)
     {
@@ -19,10 +22,10 @@
         </li>
     }
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">Two-factor authentication</a>
+        <a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">Two-factor authentication<i class="bi bi-file-earmark-lock icon"></i></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data</a>
+        <a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data<i class="bi bi-clipboard2-data icon"></i></a>
     </li>
 </ul>
 
@@ -41,13 +44,21 @@
         transition: background-color 0.3s;
     }
 
+        .nav-link .icon {
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            bottom: 15px
+        }
+
         .nav-link:hover {
             background-color: rgba(4, 59, 92, 0.1);
             color: #ff6219; /* Highlight color */
         }
 
-        .nav-link.active {
-            background-color: rgb(4, 59, 92);
-            color: white; /* Active link color */
-        }
+    .nav-pills .nav-link.active {
+        background-color: rgb(4, 59, 92);
+        color: white; /* Active link color */
+    }
 </style>
+
