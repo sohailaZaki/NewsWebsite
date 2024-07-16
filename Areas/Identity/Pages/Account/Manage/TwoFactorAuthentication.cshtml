@@ -52,9 +52,10 @@
             <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">Add authenticator app</a>
         }
         else
-        {
-            <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">Set up authenticator app</a>
-            <a id="reset-authenticator" asp-page="./ResetAuthenticator" class="btn btn-primary">Reset authenticator app</a>
+        {<div class="buttons">
+            <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-outline-success">Set up authenticator app</a>
+            <a id="reset-authenticator" asp-page="./ResetAuthenticator" class="btn btn-outline-danger">Reset authenticator app</a>
+            </div>
         }
     }
     else
@@ -69,3 +70,29 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+<style>
+    .rowdesign {
+        padding-left: 250px;
+        margin-top: 50px
+    }
+
+    h3 {
+        color: rgb(4,59,92);
+        padding-left: 300px;
+    }
+    h4{
+        color: rgb(4,59,92);
+        padding-left: 400px;
+        margin-top : 50px;
+        margin-bottom : 50px;
+
+    }
+    .text {
+        color: rgb(4,59,92);
+        padding-left: 10px;
+    }
+
+    .buttons{
+        padding-left: 280px;
+    }
+</style>
