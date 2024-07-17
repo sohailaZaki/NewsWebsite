@@ -43,7 +43,7 @@ namespace news_websites.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("news_websites.Models.ContactUS", b =>
@@ -72,7 +72,7 @@ namespace news_websites.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ContactUs");
+                    b.ToTable("ContactUs", (string)null);
                 });
 
             modelBuilder.Entity("news_websites.Models.News", b =>
@@ -108,7 +108,7 @@ namespace news_websites.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("News");
+                    b.ToTable("News", (string)null);
                 });
 
             modelBuilder.Entity("news_websites.Models.Team", b =>
@@ -133,7 +133,7 @@ namespace news_websites.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Team");
+                    b.ToTable("Team", (string)null);
                 });
 
             modelBuilder.Entity("news_websites.Models.News", b =>

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using news_websites.Data;
 
@@ -11,9 +12,11 @@ using news_websites.Data;
 namespace news_websites.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240717215845_AddingRoleView")]
+    partial class AddingRoleView
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,15 +54,15 @@ namespace news_websites.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0b11325c-8b20-4600-9cbb-2b857088ec3e",
-                            ConcurrencyStamp = "868f9601-39c0-4d20-9163-744b99bd7919",
+                            Id = "b86909f2-e155-43e7-a2ef-248091cf1b05",
+                            ConcurrencyStamp = "f5d0c35b-b679-4e8a-ba3f-a02739b65f42",
                             Name = "Admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
-                            Id = "c8aec8b9-7a2b-4c68-ba6b-ea779c0b9903",
-                            ConcurrencyStamp = "3ccdd8c5-9711-4f4e-af1b-d99478db9cb1",
+                            Id = "3f9c69dc-dda1-4dba-a38c-ef495f9ce7a1",
+                            ConcurrencyStamp = "7502ab85-8b19-47a9-bab8-fc38337ccb0c",
                             Name = "User",
                             NormalizedName = "user"
                         });

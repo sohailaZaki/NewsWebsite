@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using news_websites.Data;
 
@@ -11,9 +12,11 @@ using news_websites.Data;
 namespace news_websites.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240717221409_update")]
+    partial class update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,15 +54,15 @@ namespace news_websites.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0b11325c-8b20-4600-9cbb-2b857088ec3e",
-                            ConcurrencyStamp = "868f9601-39c0-4d20-9163-744b99bd7919",
+                            Id = "56d13040-4a20-41e3-b287-605e8004c11e",
+                            ConcurrencyStamp = "23b53fbd-e7ac-4088-a06e-965ae591dc2c",
                             Name = "Admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
-                            Id = "c8aec8b9-7a2b-4c68-ba6b-ea779c0b9903",
-                            ConcurrencyStamp = "3ccdd8c5-9711-4f4e-af1b-d99478db9cb1",
+                            Id = "7157ba1c-0117-46df-b2e5-f72e75125513",
+                            ConcurrencyStamp = "0cc86163-d1c1-4898-a359-13c299f44483",
                             Name = "User",
                             NormalizedName = "user"
                         });
@@ -238,6 +241,22 @@ namespace news_websites.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("news_websites.Models.roleViewModel", b =>
+                {
+                    b.Property<string>("roleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("roleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("useRole")
+                        .HasColumnType("bit");
+
+                    b.HasKey("roleId");
+
+                    b.ToTable("roleViewModel");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
