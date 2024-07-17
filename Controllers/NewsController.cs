@@ -11,8 +11,7 @@ using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace news_websites.Controllers
 {
-    [Authorize]
-
+    [Authorize(Roles = Roles.roleAdmin)]
     public class NewsController : Controller
     {
         private readonly NewsContext db;

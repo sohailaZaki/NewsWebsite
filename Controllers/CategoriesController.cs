@@ -10,7 +10,7 @@ using news_websites.Models;
 
 namespace news_websites.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = Roles.roleAdmin)]
     public class CategoriesController : Controller
     {
         private readonly NewsContext db;
