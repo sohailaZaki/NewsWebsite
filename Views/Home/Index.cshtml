@@ -1,5 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
+@model List<Categories>
+
 @{
     var isUserAuthenticated = SignInManager.IsSignedIn(User);
     ViewData["Title"] = "Home Page";
@@ -42,14 +44,7 @@
                         }
                     </div>
 
-                    @if (isUserAuthenticated)
-                    {
-                        <a href="/Home/Categories" class="btn-get-started scrollto">Read More</a>
-                    }
-                    else
-                    {
-                        <a onclick="openPopup()" href="#" class="btn-get-started scrollto">Read More</a>
-                    }
+ 
                 </div>
             </div>
 
@@ -58,7 +53,7 @@
                 <div class="container">
                     <h2>Your Trusted Source for News</h2>
                     <p>At News Nexus, we prioritize delivering factual and unbiased news...</p>
-                    <a href="/Home/Categories" class="btn-get-started scrollto">Read More</a>
+               
                 </div>
             </div>
 
@@ -67,7 +62,7 @@
                 <div class="container">
                     <h2>Explore the World with Us</h2>
                     <p>Join the News Nexus community and explore the world...</p>
-                    <a href="/Home/Categories" class="btn-get-started scrollto">Read More</a>
+                   
                 </div>
             </div>
 
@@ -83,7 +78,39 @@
 
     </div>
 </section><!-- End Hero -->
+<section id="Cattitle" class="mt-5" >
+    <strong> <h3><i class="bi bi-list-columns-reverse mr-2"></i> Categories of News</h3></strong>
+</section>
+<section id="featured-services" class="featured-services">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="row">
 
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <a href="/Home/NewsofCategory/@item.Id">
+                            <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                        </a>
+                        <a href="/Home/NewsofCategory/@item.Id">
+
+                            <h4 class="title">@item.Name  </h4>
+
+                        </a>
+
+
+                        <a href="/Home/NewsofCategory/@item.Id">
+                            <p class="description">@item.Description</p>
+                        </a>
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</section>
 <script>
     document.getElementById("open-popup-btn").addEventListener("click", function () {
         document.getElementsByClassName("popup")[0].classList.add("active");
@@ -107,66 +134,30 @@
         color: rgb(4,59,92);
     }
 
-    .popup {
-        width: 350px;
-        height: 400px;
-        padding: 40px 20px;
-        background-color: white;
-        border-radius: 10px;
-        box-sizing: border-box;
-        z-index: 2;
-        text-align: center;
-        visibility: hidden;
-        top: 0%;
-        left: 25%;
-        transform: translate(-50%,-50%) scale(0.1);
-        transition: transform 0.4s;
-        margin: 350px 400px auto;
-        position: absolute;
+    #Cattitle{
+        text-align: center; /* Center the text */
+        padding: 20px; /* Add padding around the text */
+        margin: 20px auto; /* Center the container and add margin */
+        max-width: 40%; /* Set a max width for the container */
+        background-color: #fff; /* Set background color */
+        border-radius: 15px; /* Round the corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+        transition: transform 0.2s; /* Smooth hover transition */
     }
 
-    .open-popup {
-        visibility: visible;
-        transform: translate(-50%,-50%) scale(1);
-        transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+    #Cattitle h3{
+      
+            font-size: 2.5em; /* Increase font size */
+            color: rgb(4,59,92); /* Text color */
+            margin: 0; /* Remove default margin */
+    
+         
     }
 
-    .popup .icon {
-        margin: 5px 0;
-        width: 50px;
-        height: 50px;
-        text-align: center;
-        display: inline-block;
-        border-radius: 50%;
-        line-height: 60px;
-    }
+        #Cattitle:hover {
+        transform: translateY(-10px); /* Move the element up on hover */
+        box-shadow: 0 8px 16px rgba(4, 59, 92, 0.3); /* Increase shadow on hover */
+  
 
-        .popup .icon .material-symbols-outlined {
-            font-size: 30px;
-            color: bisque;
         }
-
-    .popup .title {
-        margin: 5px 0;
-        font-size: 25px;
-        font-weight: 600;
-    }
-
-    .popup .description {
-        color: #222;
-        font-size: 15px;
-        padding: 5px;
-    }
-
-    .popup.active .icon {
-        transition: all 300ms ease-in-out 250ms;
-    }
-
-    .popup.active .title {
-        transition: all 300ms ease-in-out 300ms;
-    }
-
-    .popup.active .description {
-        transition: all 300ms ease-in-out 350ms;
-    }
 </style>

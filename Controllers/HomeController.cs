@@ -40,6 +40,7 @@ namespace news_websites.Controllers
 
             return View();
         }
+       
         public IActionResult Categories()
 
         {
