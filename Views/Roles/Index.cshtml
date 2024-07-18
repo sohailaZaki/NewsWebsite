@@ -1,0 +1,72 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<IdentityUser>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <section id="Cattitle" class="mt-5">
+            <strong> <h3></i> System Users  <i class="bi bi-people"></i></h3></strong>
+        </section>
+    </div>
+
+
+
+    <table class="table table-hover custom-table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        <a asp-controller="Roles" asp-action="addRoles" asp-route-userId="@item.Id">
+                            <i class="bi bi-pencil-square" style="color: rgba(4,59,92,1)"></i>
+                        </a> 
+                     
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<style>
+    #Cattitle {
+        text-align: center; /* Center the text */
+        padding: 20px; /* Add padding around the text */
+        margin: 20px auto; /* Center the container and add margin */
+        max-width: 40%; /* Set a max width for the container */
+        background-color: #fff; /* Set background color */
+        border-radius: 15px; /* Round the corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+        transition: transform 0.2s; /* Smooth hover transition */
+    }
+
+        #Cattitle h3 {
+            font-size: 2.5em; /* Increase font size */
+            color: rgb(4,59,92); /* Text color */
+            margin: 0; /* Remove default margin */
+        }
+
+        #Cattitle:hover {
+            transform: translateY(-10px); /* Move the element up on hover */
+            box-shadow: 0 8px 16px rgba(4, 59, 92, 0.3); /* Increase shadow on hover */
+        }
+</style>

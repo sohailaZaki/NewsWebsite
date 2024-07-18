@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using news_websites.Data;
 
@@ -11,9 +12,11 @@ using news_websites.Data;
 namespace news_websites.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240717230051_updating tabels")]
+    partial class updatingtabels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,15 +54,15 @@ namespace news_websites.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0b11325c-8b20-4600-9cbb-2b857088ec3e",
-                            ConcurrencyStamp = "868f9601-39c0-4d20-9163-744b99bd7919",
+                            Id = "406b6108-2cfa-4f79-b922-1204ea658d21",
+                            ConcurrencyStamp = "6fb40c7b-2916-49fa-bd70-ce29627ca66e",
                             Name = "Admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
-                            Id = "c8aec8b9-7a2b-4c68-ba6b-ea779c0b9903",
-                            ConcurrencyStamp = "3ccdd8c5-9711-4f4e-af1b-d99478db9cb1",
+                            Id = "9b87a77e-a4b1-4cf0-bf08-aed171b4600f",
+                            ConcurrencyStamp = "05ff4b4a-b72b-4d00-a526-b3ac71df9150",
                             Name = "User",
                             NormalizedName = "user"
                         });
